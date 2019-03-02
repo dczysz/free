@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Free*</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="bg-light">
+
+    <div class="container">
+
+      <header class="text-center mb-5">
+        <h1 class="py-4">Free<sup><span>*</span></sup></h1>
+        <h5 class="mb-4">This site was made to show some of the invasive tracking and data collection behind many popular services</h5>
+        <p>How easy is it to track you? <a href="#" onclick="openFingerprint()">See</a> what information can be obtained each time you visit a website, even without using third-party tracking software</p>
+      </header>
+
+      <div class="card-columns text-light">
+      </div> <!-- end card-columns -->
+
+      <footer class="text-center my-2 small">Copyright &copy; <span id="year">2019</span> D. Czysz</footer>
+    </div> <!-- end container -->
+
+    <script src="lib/js/jquery.min.js" charset="utf-8"></script>
+    <script src="lib/js/popper.min.js" charset="utf-8"></script>
+    <script src="lib/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/sites.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script>
+      $(document).ready(function() {
+        $('#year').text((new Date).getFullYear());
+      });
+
+      function openFingerprint() {
+        $('body')[0].style.transition =  'background-color .5s';
+        $('body')[0].classList.remove('bg-light');
+        $('body')[0].classList.add('bg-dark');
+        $('.container').fadeOut(500, 'linear', function() {
+          window.location.href = 'https://dczysz.github.io/tracking';
+        });
+      }
+    </script>
+  </body>
+</html>

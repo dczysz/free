@@ -1,0 +1,29 @@
+header h1 {
+  font-size: 4rem;
+}
+header sup {
+  font-size: 1.5rem;
+  vertical-align: super;
+}
+card-header a:hover {
+  text-decoration: none !important;
+}
+.card {
+  margin-bottom: 23px !important;
+  transition: transform .2s;
+}
+.card:hover {
+  transform: scale(1.06);
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
