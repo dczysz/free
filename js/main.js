@@ -40,7 +40,7 @@ for (let i = 0; i < sites.length; i++) {
   card.style.background = site.color;
 
     header.classList.add('card-header');
-      headerText.classList.add('card-title', 'text-center');
+      headerText.classList.add('card-title', 'text-center', 'mb-0');
       headerText.innerHTML = site.name;
     header.appendChild(headerText);
 
