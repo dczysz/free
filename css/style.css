@@ -12,9 +12,7 @@ card-header a:hover {
   margin-bottom: 23px !important;
   transition: transform .2s;
 }
-.card:hover {
-  transform: scale(1.06);
-}
+
 
 @media (min-width: 576px) {
     .card-columns {
@@ -25,5 +23,8 @@ card-header a:hover {
 @media (min-width: 768px) {
     .card-columns {
         column-count: 3;
+    }
+    .card:hover {
+      transform: scale(1.06);
     }
 }
