@@ -8,8 +8,10 @@ header sup {
 card-header a:hover {
   text-decoration: none !important;
 }
-.card {
+a.card {
   margin-bottom: 23px !important;
+  text-decoration: none;
+  color: #fff;
 }
 
 

@@ -18,8 +18,7 @@ fisherYatesShuffle(sites);
 
 for (let i = 0; i < sites.length; i++) {
   let site = sites[i],
-      col = $('.card-columns')[0],
-      card = document.createElement('div'),
+      card = document.createElement('a'),
       header = document.createElement('div'),
       headerText = document.createElement('h3'),
       body = document.createElement('div'),
@@ -35,7 +34,8 @@ for (let i = 0; i < sites.length; i++) {
   // Add more info url if exists
   if (site.info != '') {
     card.style.cursor = 'pointer';
-    card.onclick = function() { window.location.href = site.info; }
+    card.href = site.info;
+    card.target = '_blank'
   }
   card.style.background = site.color;
 
@@ -61,7 +61,8 @@ for (let i = 0; i < sites.length; i++) {
 
   card.appendChild(header);
   card.appendChild(body);
-  col.appendChild(card);
+
+  $('.card-columns')[0].appendChild(card);
 }
 
 function fisherYatesShuffle(array) {
