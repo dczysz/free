@@ -39,6 +39,9 @@ a.card {
     .card-columns {
         column-count: 1;
     }
+    header h1 {
+      font-size: 3rem;
+    }
 }
 @media (min-width: 576px) {
     .card-columns {
