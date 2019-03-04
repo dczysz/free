@@ -1,68 +1,113 @@
+$('.fingerprint').click(function(event) {
+  event.preventDefault();
+  $('body')[0].style.transition =  'background-color .5s';
+  $('body')[0].classList.remove('bg-light');
+  $('body')[0].classList.add('bg-dark');
+  $('.container').fadeOut(500, 'linear', function() {
+    window.location.href = event.target.href;
+  });
+});
+
+/*
+  When the user scrolls down, hide the navbar.
+  When the user scrolls up, show the navbar
+*/
+const MIN_SCROLL_POS = $('nav').height() + $('header').height() + 30;
+var prevScrollpos = window.pageYOffset;
+
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    $(".navbar")[0].style.top = "0";
+  } else if (currentScrollPos > MIN_SCROLL_POS) {
+    $(".navbar")[0].style.top = "-56px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
 /* Current format
 
-  <div class="card" style="background-color: ${site.color};">
+  <div class="card" style="background-color: ${site.color} ">
     <div class="card-header">
-      <h3 class="card-title text-center">${site.name}</h3>
+      <h3 class="card-title text-center"> ${site.name} </h3>
     </div>
     <div class="card-body">
-      <h5 class="card-title">Data</h5>
-      <p class="card-text">${site.data}</p>
-      <h5 class="card-title">Uses</h5>
-      <p class="card-text">${site.uses}</p>
+      <h5 class="card-title"> ${site[n]   key}   </h5>
+      <p class="card-text">   ${site[n]   value} </p>
+      <h5 class="card-title"> ${site[n+1] key}   </h5>
+      <p class="card-text">   ${site[n+1] value} </p>
     </div>
   </div>
 */
 
-// Shuffle sites in random order
-fisherYatesShuffle(sites);
+const CARD_OPACITY = '88';
 
-for (let i = 0; i < sites.length; i++) {
-  let site = sites[i],
-      card = document.createElement('a'),
-      header = document.createElement('div'),
-      headerText = document.createElement('h3'),
-      body = document.createElement('div'),
-      dataTitle = document.createElement('h5'),
-      dataText = document.createElement('p'),
-      dataTextNode = document.createTextNode(site.data),
-      usesTitle = document.createElement('h5'),
-      usesText = document.createElement('p'),
-      usesTextNode = document.createTextNode(site.uses);
+function loadCards(array) {
+  // Shuffle sites in random order
+  fisherYatesShuffle(array);
 
-  // Build card
-  card.classList.add('card');
-  // Add more info url if exists
-  if (site.info != '') {
-    card.style.cursor = 'pointer';
-    card.href = site.info;
-    card.target = '_blank'
-  }
-  card.style.background = site.color;
+  for (let i = 0; i < array.length; i++) {
+    let site = array[i],
+        card = document.createElement('a'),
+        header = document.createElement('div'),
+        logo = document.createElement('img'),
+        headerText = document.createElement('h3'),
+        body = document.createElement('div'),
+        dataTitle,
+        dataText;
 
-    header.classList.add('card-header');
-      headerText.classList.add('card-title', 'text-center', 'mb-0');
-      headerText.innerHTML = site.name;
+    // Build card
+    card.classList.add('card');
+    // Add more info url if exists
+    if (site.url != '') {
+      card.style.cursor = 'pointer';
+      card.href = site.url;
+      card.target = '_blank'
+    }
+    // Set styles
+    card.style.borderWidth = 'medium';
+    card.style.borderColor = site.color + ((site.logo)? CARD_OPACITY : '');
+    header.style.background = site.color + ((site.logo)? CARD_OPACITY : '');
+    header.style.borderRadius = 0;
+    header.classList.add('text-light');
+    headerText.style.textShadow = '2px 2px 4px #000'
+
+    // Populate header
+    header.classList.add('card-header', 'text-center');
+    headerText.classList.add('card-title', 'text-center', 'mb-0');
+    headerText.innerHTML = site.name;
+    if (site.logo) {
+      logo.src = site.logo;
+      header.appendChild(logo);
+    }
     header.appendChild(headerText);
 
     body.classList.add('card-body');
-      dataTitle.classList.add('card-title');
-      dataTitle.innerHTML = 'Data';
-      dataText.classList.add('card-text');
-      dataText.appendChild(dataTextNode);
 
-      usesTitle.classList.add('card-title');
-      usesTitle.innerHTML = 'Uses';
-      usesText.classList.add('card-text');
-      usesText.appendChild(usesTextNode);
-    body.appendChild(dataTitle);
-    body.appendChild(dataText);
-    body.appendChild(usesTitle);
-    body.appendChild(usesText);
+    // Add all descriptive key-values to cards
+    for (let key = 0; key < Object.keys(site).length; key++) {
+      // Ignore keys specified below
+      if ( site[Object.keys(site)[key]] != site.name
+        && site[Object.keys(site)[key]] != site.color
+        && site[Object.keys(site)[key]] != site.url
+        && site[Object.keys(site)[key]] != site.logo ) {
+          dataTitle = document.createElement('h5');
+          dataTitle.classList.add('card-title', 'mb-1');
+          dataTitle.innerHTML = capitalize(Object.keys(site)[key]);
+          dataText = document.createElement('div');
+          dataText.innerHTML = site[Object.keys(site)[key]];
+          dataText.classList.add('card-text');
+          body.appendChild(dataTitle);
+          body.appendChild(dataText);
+      }
+    }
 
-  card.appendChild(header);
-  card.appendChild(body);
+    card.appendChild(header);
+    card.appendChild(body);
 
-  $('.card-columns')[0].appendChild(card);
+    $('.card-columns')[0].appendChild(card);
+  }
 }
 
 function fisherYatesShuffle(array) {
@@ -77,4 +122,12 @@ function fisherYatesShuffle(array) {
      array[j] = tempi;
    }
    return array;
+}
+
+function capitalize(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+String.prototype.addCommas = function() {
+  return this.replace(/,/g, ', ');
 }
