@@ -41,7 +41,8 @@ window.onscroll = function() {
   </div>
 */
 
-const CARD_OPACITY = '88';
+const CARD_OPACITY = 'aa',
+      CARD_W_IMG_OPACITY = '88';
 
 function loadCards(array) {
   // Shuffle sites in random order
@@ -67,8 +68,8 @@ function loadCards(array) {
     }
     // Set styles
     card.style.borderWidth = 'medium';
-    card.style.borderColor = site.color + ((site.logo)? CARD_OPACITY : '');
-    header.style.background = site.color + ((site.logo)? CARD_OPACITY : '');
+    card.style.borderColor  = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
+    header.style.background = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
     header.style.borderRadius = 0;
     header.classList.add('text-light');
     headerText.style.textShadow = '2px 2px 4px #000'
@@ -124,8 +125,14 @@ function fisherYatesShuffle(array) {
    return array;
 }
 
+// Capitalize string_with_underscores
 function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  let words = str.split('_');
+
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+  }
+  return words.join(' ');
 }
 
 String.prototype.addCommas = function() {
