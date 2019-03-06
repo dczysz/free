@@ -1,3 +1,6 @@
+/*
+  Fade to bg-dark before linking to tracking site
+-------------------------------------------------- */
 $('.fingerprint').click(function(event) {
   event.preventDefault();
   $('body')[0].style.transition =  'background-color .5s';
@@ -8,10 +11,6 @@ $('.fingerprint').click(function(event) {
   });
 });
 
-/*
-  When the user scrolls down, hide the navbar.
-  When the user scrolls up, show the navbar
-*/
 const MIN_SCROLL_POS = $('nav').height() + $('header').height() + 30;
 var prevScrollpos = window.pageYOffset;
 
@@ -80,6 +79,9 @@ function loadCards(array) {
     headerText.innerHTML = site.name;
     if (site.logo) {
       logo.src = site.logo;
+      logo.onerror = function() {
+        this.style.display = 'none';
+      }
       header.appendChild(logo);
     }
     header.appendChild(headerText);
@@ -125,7 +127,9 @@ function fisherYatesShuffle(array) {
    return array;
 }
 
-// Capitalize string_with_underscores
+/*
+  Capitalize string_with_underscores
+---------------------------------------- */
 function capitalize(str) {
   let words = str.split('_');
 
