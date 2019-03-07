@@ -264,6 +264,14 @@ var breaches = [
     name: 'Epic Games',
     color: '#313131'
   }, {
+    name: 'Equifax',
+    color: '#841b2a',
+    logo: 'img/equifax.png',
+    url: 'https://www.consumer.ftc.gov/blog/2017/09/equifax-data-breach-what-do',
+    date: 'May 15, 2017',
+    accounts: '143,000,000',
+    data: 'Names, Social Security numbers, Birth dates, Addresses, Driver\'s license numbers, Credit card numbers, Dispute documents'
+  }, {
     name: 'Experian',
     color: '#007dc3'
   }, {
@@ -289,7 +297,8 @@ var breaches = [
     color: '#007bb6'
   }, {
     name: 'Malwarebytes',
-    color: '#1b79d0'
+    color: '#1b79d0',
+    logo: 'img/malwarebytes.png'
   }, {
     name: 'MyFitnessPal',
     color: '#0070bf'

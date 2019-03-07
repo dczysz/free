@@ -43,9 +43,24 @@ window.onscroll = function() {
 const CARD_OPACITY = 'aa',
       CARD_W_IMG_OPACITY = '88';
 
-function loadCards(array) {
+/*
+  Add cards to card-columns div
+
+  @param {array} array : Array of site objects
+  @param {options} object : Object of following optional keys:
+    object = {
+      'shuffle': bool - Shuffle cards or keep in alphabetical order
+      'name'  : bool - Show 'name' property of site in card header
+    }
+------------------------------------------------------------ */
+function loadCards(array, options = { shuffle: true, title: true, name: false }) {
+  // Reset default values if object passed in but doesn't contain all values
+  if ( !options.hasOwnProperty('shuffle')) options.shuffle = true;
+  if ( !options.hasOwnProperty('title'))   options.title   = true;
+  if ( !options.hasOwnProperty('name'))    options.name    = false;
+
   // Shuffle sites in random order
-  fisherYatesShuffle(array);
+  if (options.shuffle) fisherYatesShuffle(array);
 
   for (let i = 0; i < array.length; i++) {
     let site = array[i],
@@ -70,8 +85,8 @@ function loadCards(array) {
     card.style.borderColor  = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
     header.style.background = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
     header.style.borderRadius = 0;
-    header.classList.add('text-light');
-    headerText.style.textShadow = '2px 2px 4px #000'
+    header.classList.add('text-dark');
+    // headerText.style.textShadow = '2px 2px 4px #000';
 
     // Populate header
     header.classList.add('card-header', 'text-center');
@@ -84,25 +99,42 @@ function loadCards(array) {
       }
       header.appendChild(logo);
     }
-    header.appendChild(headerText);
+    if (options.title) header.appendChild(headerText);
+    else {
+      logo.style.marginBottom = 0;
+      logo.style.maxHeight = '50px';
+    }
 
     body.classList.add('card-body');
 
     // Add all descriptive key-values to cards
     for (let key = 0; key < Object.keys(site).length; key++) {
       // Ignore keys specified below
-      if ( site[Object.keys(site)[key]] != site.name
-        && site[Object.keys(site)[key]] != site.color
-        && site[Object.keys(site)[key]] != site.url
-        && site[Object.keys(site)[key]] != site.logo ) {
-          dataTitle = document.createElement('h5');
-          dataTitle.classList.add('card-title', 'mb-1');
+      if ( (site[Object.keys(site)[key]] != site.name
+              || options.name)
+            && site[Object.keys(site)[key]] != site.color
+            && site[Object.keys(site)[key]] != site.url
+            && site[Object.keys(site)[key]] != site.logo ) {
+        dataTitle = document.createElement('h5');
+        dataTitle.classList.add('card-title', 'mb-1');
+
+        // If no name in title, put it in card body
+        if (site[Object.keys(site)[key]] == site.name) {
+          dataTitle.innerHTML = site[Object.keys(site)[key]];
+          dataTitle.style.textAlign = 'center';
+
+          body.appendChild(dataTitle);
+        } else {
           dataTitle.innerHTML = capitalize(Object.keys(site)[key]);
           dataText = document.createElement('div');
           dataText.innerHTML = site[Object.keys(site)[key]];
           dataText.classList.add('card-text');
+
           body.appendChild(dataTitle);
           body.appendChild(dataText);
+        }
+
+
       }
     }
 
