@@ -6,7 +6,7 @@ var sites = [
     color: '#4767aa',
     logo: 'img/facebook.png',
     url: 'https://www.facebook.com/about/privacy',
-    data_collected: 'Interactions on Facebook <a href=\"https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/\" target=\"_blank\">like quizzes and comments and statuses you type but do not post</a>, browsing info from pages with like buttons, location data, apps you and friends install, Instagram and WhatsApp data',
+    data_collected: 'Interactions on Facebook <a href=\"https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/\" target=\"_blank\">like quizzes and comments and statuses you type but do not post</a>, browsing info from websites you visit with like buttons, location data, apps you and friends install, Instagram and WhatsApp data',
     used_for: 'Targeted advertising, facial recognition'
    }, {
     name: 'Google',
@@ -151,7 +151,7 @@ var alternatives = [
     logo: 'img/malwarebytes.png',
     url: 'https://www.malwarebytes.com',
     what_it_is: 'PC utility that reactively scans for and removes malware, ransomeware, adware, and more',
-    what_it_costs: 'Free'
+    what_it_costs: 'Free, premium adds more features like automated scans and real-time protection'
   }, {
     name: 'Nextcloud',
     color: '#0082c9',
