@@ -6,14 +6,14 @@ var sites = [
     color: '#4767aa',
     logo: 'img/facebook.png',
     url: 'https://www.facebook.com/about/privacy',
-    data_collected: 'Interactions on Facebook <a href=\"https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/\" target=\"_blank\">like quizzes and comments and statuses you type but do not post</a>, browsing info from websites you visit with like buttons, location data, apps you and friends install, Instagram and WhatsApp data',
+    data_collected: 'Interactions on Facebook like quizzes, <a href=\"https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/\" target=\"_blank\">comments and statuses you type but do not post</a>, browsing info from websites you visit with like buttons, location data, friends, <a href="https://arstechnica.com/gadgets/2012/04/does-facebook-track-your-enemies-as-well-as-your-friends/" target="_blank">enemies(?)</a>, apps you and friends install, Instagram and WhatsApp data',
     used_for: 'Targeted advertising, facial recognition'
    }, {
     name: 'Google',
     color: '#4086f4',
     logo: 'img/google.png',
     url: 'https://policies.google.com/privacy',
-    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, and location on Android',
+    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location on Android  <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg" target="_blank">even in airplane mode</a>',
     used_for: 'Targeted advertising'
   }, {
     name: 'Instagram',
@@ -35,7 +35,7 @@ var sites = [
     logo: 'img/paypal.png',
     url: 'https://www.paypal.com/gi/webapps/mpp/ua/privacy-full',
     data_collected: 'Name, address, phone, email, contacts, financial account info, transaction info from each transaction including device info, usage and behavior data, and location',
-    used_for: 'Location-based advertising, sharing with other advertising and analytics services and financial institutions'
+    used_for: 'Location-based advertising, sharing with other advertising and analytics services and financial institutions - <a href="http://rebecca-ricks.com/paypal-data/" target="_blank">check out this site</a> that shows all the companies PayPal shares your data with'
   }, {
     name: 'Tinder',
     color: '#fe5665',
@@ -48,8 +48,8 @@ var sites = [
     color: '#1e3944',
     logo: 'img/uber.png',
     url: 'https://privacy.uber.com/policy',
-    data_collected: 'Name, credit card info, current location even when app is in background, regularly travelled locations',
-    used_for: 'Marketing, data analytics and research, employees have full access to user data (which has been used to target reporters critical of Uber)'
+    data_collected: 'Name, credit card info, current location <a href="" target="_blank">from when you request a ride until 5 minutes after you\'re dropped off</a>',
+    used_for: 'Marketing, data analytics and research, employees have full access to user data <a href="https://www.revealnews.org/blog/why-privacy-advocates-are-worried-about-ubers-security-problems/" target="_blank">which could be used against you</a>'
   }, {
     name: 'Venmo',
     color: '#3d95ce',
