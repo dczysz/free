@@ -4,7 +4,7 @@
 .nav-link {
   transition: color 0.3s;
 }
-.container {
+#container {
   margin-top: 56px;
 }
 header h1 {
@@ -63,7 +63,7 @@ card-header a:hover {
       transition: all .2s;
     }
     .card:hover {
-      transform: scale(1.06);
+      transform: scale(1.05);
       box-shadow: 5px 5px 15px #000;
     }
 }
