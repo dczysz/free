@@ -77,57 +77,64 @@ var alternatives = [
     what_it_costs: 'Free masked emails and extension, premium adds masked phone and credit card for down to $2.20/month with 3-year subscription'
   }, {
     name: 'Bouncer',
-    color: '#fccc0c',
-    logo: 'img/bouncer.png',
+    color: '#fdde58',
+    logo: 'img/bouncer-icon.png',
     url: 'https://play.google.com/store/apps/details?id=com.samruston.permission',
     what_it_is: 'Grant permissions to apps temporarily and automatically remove them when you close the app or after a chosen period of time',
     what_it_costs: '$0.99'
   }, {
+    name: 'Cookie AutoDelete',
+    color: '#00a8ff',
+    logo: 'img/cookieautodelete-icon.png',
+    url: 'https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/blob/3.X.X-Branch/README.md',
+    what_it_is: 'Open-source broswer extension that automatically deletes any cookies not in use whenever a tab is closed',
+    what_it_costs: 'Free'
+  }, {
     name: 'DuckDuckGo',
     color: '#de5833',
-    logo: 'img/duckduckgo.png',
+    logo: 'img/duckduckgo-icon.png',
     url: 'https://duckduckgo.com/',
     what_it_is: 'Search engine that makes money from ads but doesn\'t track you',
     what_it_costs: 'Free, ads are based on search terms only'
   }, {
     name: 'Exodus Privacy',
     color: '#684971',
-    logo: 'img/exodusprivacy.png',
+    logo: 'img/exodusprivacy-icon.png',
     url: 'https://exodus-privacy.eu.org/en/',
     what_it_is: 'Analyzes privacy concerns in Android applications',
     what_it_costs: 'Free'
   }, {
     name: 'F-Droid',
     color: '#b1eb0b',
-    logo: 'img/fdroid.png',
+    logo: 'img/fdroid-icon.png',
     url: 'https://f-droid.org/',
     what_it_is: 'Android app repository of free and open-source apps',
     what_it_costs: 'Free'
   }, {
     name: 'Feeder',
     color: '#189052',
-    logo: 'img/feeder.png',
+    logo: 'img/feeder-icon.png',
     url: 'https://f-droid.org/en/packages/com.nononsenseapps.feeder/',
     what_it_is: 'Open-source RSS feed reader for curating your own news feed',
     what_it_costs: 'Free'
   }, {
     name: 'Firefox',
     color: '#ff600c',
-    logo: 'img/firefox.png',
+    logo: 'img/firefox-icon.png',
     url: 'https://www.mozilla.org/en-US',
-    what_it_is: 'Browser that\'s not made by an ad company, so it doesn\'t track everything you do',
+    what_it_is: 'Open-source browser that\'s not made by an ad company so it doesn\'t track everything you do, instructions for extra privacy settings tweaks <a href="https://www.privacytools.io/#about_config" target="_blank">can be found here</a>',
     what_it_costs: 'Free'
   }, {
     name: 'HTTPS Everywhere',
     color: '#0098ff',
-    logo: 'img/httpseverywhere.png',
+    logo: 'img/httpseverywhere-icon.png',
     url: 'https://www.eff.org/https-everywhere',
     what_it_is: 'Open-source browser extension that encrypts website communications by changing any HTTP connections to HTTPS',
     what_it_costs: 'Free, developed by The Tor Project and the Electronic Frontier Foundation'
   }, {
     name: 'KeePassXC',
     color: '#6cac4d',
-    logo: 'img/keepassxc.png',
+    logo: 'img/keepassxc-icon.png',
     url: 'https://keepassxc.org/',
     what_it_is: 'Open-source password manager with encrypted database stored locally instead of in the cloud',
     what_it_costs: 'Free'
@@ -153,6 +160,20 @@ var alternatives = [
     what_it_is: 'PC utility that reactively scans for and removes malware, ransomeware, adware, and more',
     what_it_costs: 'Free, premium adds more features like automated scans and real-time protection'
   }, {
+    name: 'mastodon',
+    color: '#2b90d9',
+    logo: 'img/mastodon.png',
+    url: 'https://joinmastodon.org/',
+    what_it_is: 'Open-source Twitter-like alternative with no ads and communtiy-owned instances',
+    what_it_costs: 'Free'
+  }, {
+    name: 'MeWe',
+    color: '#5e87a5',
+    logo: 'img/mewe.png',
+    url: 'https://mewe.com/',
+    what_it_is: 'Social network built with <a href="https://mewe.com/privacy#bill" target="_blank">privacy-by-design</a>, no ads, spyware, or facial-recognition, personal data is never shared and can be deleted at any time',
+    what_it_costs: 'Free access to Facebook-like features as well as 8GB cloud storage, supported by paying for more storage or other features like end-to-end encrypted chat'
+  }, {
     name: 'Nextcloud',
     color: '#0082c9',
     logo: 'img/nextcloud.png',
@@ -162,21 +183,28 @@ var alternatives = [
   }, {
     name: 'NoScript',
     color: '#cf0000',
-    logo: 'img/noscript.png',
+    logo: 'img/noscript-icon.png',
     url: 'https://noscript.net',
     what_it_is: 'Open-source Firefox browser extension that blocks all scripts on websites allowing you to build your own whitelist',
     what_it_costs: 'Free'
   }, {
     name: 'Pay With Privacy',
     color: '#ff2d36',
-    logo: 'img/paywithprivacy.png',
+    logo: 'img/paywithprivacy-icon.png',
     url: 'https://privacy.com',
     what_it_is: 'Create free, unique, virtual debit cards for either single-use or have them link to the first vendor they\'re used with, can also set a monthly limit for subscriptions and bills',
     what_it_costs: 'Free, they get a cut of the debit card transaction fees like any other bank'
   }, {
+    name: '&#9651; Prismo',
+    color: '#16a1b5',
+    logo: '',
+    url: 'https://prismo.news',
+    what_it_is: 'Decentralized open-source Reddit alternative',
+    what_it_costs: 'Free'
+  }, {
     name: 'Privacy Badger',
     color: '#ec9329',
-    logo: 'img/privacybadger.png',
+    logo: 'img/privacybadger-icon.png',
     url: 'https://www.eff.org/privacybadger',
     what_it_is: 'Open-source browser extension that automatically learns to block invisible trackers that don\'t respect Do Not Track, instead of relying on a central blacklist',
     what_it_costs: 'Free, developed by the Electronic Frontier Foundation'
@@ -197,7 +225,7 @@ var alternatives = [
   }, {
     name: 'uBlock Origin',
     color: '#800000',
-    logo: 'img/ublockorigin.png',
+    logo: 'img/ublockorigin-icon.png',
     url: 'https://github.com/gorhill/uBlock',
     what_it_is: 'Open-source browser extension that blocks ads in basic mode, functions like NoScript in advanced mode',
     what_it_costs: 'Free'
@@ -211,7 +239,7 @@ var alternatives = [
   }, {
     name: 'Wire',
     color: '#1f2024',
-    logo: 'img/wire.png',
+    logo: 'img/wire-icon.png',
     url: 'https://wire.com/en/',
     what_it_is: 'End-to-end encrypted messaging, file sharing, and voice calls',
     what_it_costs: 'Free for personal use with max file sharing size of 25MB/file'
@@ -221,30 +249,39 @@ var alternatives = [
 /*
   https://haveibeenpwned.com/api/v2/breaches
 
+  icon key is an alternative to -icon in logo name,
+  actual value isn't checked, just presence of key
+
   Sites with additional info not from haveibeenpwned
 ------------------------------------------------------------ */
 var breaches = [
   {
     name: 'Adobe',
-    color: '#ed1c24'
+    color: '#ed1c24',
+    icon: true
   }, {
     name: 'Ancestry',
     color: '#9cbe30'
   }, {
     name: 'Ashley Madison',
-    color: '#191919'
+    color: '#191919',
+    icon: true
   }, {
     name: 'Brazzers',
-    color: '#ffcc00'
+    color: '#ffcd00',
+    logo: 'img/brazzers.png'
   }, {
     name: 'CD Projekt RED',
-    color: '#db0d15'
+    color: '#db0d15',
+    icon: true
   }, {
     name: 'Collection #1',
-    color: DEFAULT_COLOR
+    color: DEFAULT_COLOR,
+    icon: true
   },  {
     name: 'Comcast',
-    color: DEFAULT_COLOR
+    color: DEFAULT_COLOR,
+    icon: true
   }, {
     name: 'DaFont',
     color: '#cc0000'
@@ -256,10 +293,12 @@ var breaches = [
     color: '#3f71a5'
   }, {
     name: 'Dropbox',
-    color: '#007ee5'
+    color: '#007ee5',
+    icon: true
   }, {
     name: 'Edmodo',
-    color: '#276cb0'
+    color: '#276cb0',
+    icon: true
   }, {
     name: 'Epic Games',
     color: '#313131'
@@ -279,7 +318,8 @@ var breaches = [
     color: DEFAULT_COLOR
   }, {
     name: 'Gawker',
-    color: '#d3473a'
+    color: '#d3473a',
+    icon: true
   }, {
     name: 'imgur',
     color: '#33353b'
@@ -294,23 +334,27 @@ var breaches = [
     color: '#172424'
   }, {
     name: 'LinkedIn',
-    color: '#007bb6'
+    color: '#007bb6',
+    icon: true
   }, {
     name: 'Malwarebytes',
     color: '#1b79d0',
     logo: 'img/malwarebytes.png'
   }, {
     name: 'MyFitnessPal',
-    color: '#0070bf'
+    color: '#0070bf',
+    icon: true
   }, {
     name: 'MyHeritage',
-    color: '#d96c3b'
+    color: '#d96c3b',
+    icon: true
   }, {
     name: 'MySpace',
     color: '#003399'
   }, {
     name: 'Nexus Mods',
-    color: '#faa740'
+    color: '#faa740',
+    icon: true
   }, {
     name: 'Plex',
     color: '#282a2d'
@@ -319,34 +363,40 @@ var breaches = [
     color: '#e43526'
   }, {
     name: 'Snapchat',
-    color: '#fffc00'
+    color: '#fffc00',
+    icon: true
   }, {
     name: 'Sony',
     color: '#000000'
   }, {
     name: 'Ticketfly',
-    color: '#5746de'
+    color: '#5746de',
+    icon: true
   }, {
     name: 'tumblr',
     color: '#001935'
   }, {
     name: 'Unreal Engine',
-    color: '#2a2a2a'
+    color: '#2a2a2a',
+    icon: true
   }, {
     name: 'uTorrent',
-    color: '#018643'
+    color: '#018643',
+    icon: true
   }, {
     name: 'VK',
     color: '#4c75a3'
   }, {
     name: 'We Heart It',
-    color: '#ff5c88'
+    color: '#ff5c88',
+    icon: true
   }, {
     name: 'xHamster',
     color: '#e2454a'
   }, {
-    name: 'Yahoo',
-    color: '#63246b'
+    name: 'Yahoo!',
+    color: '#63246b',
+    icon: true
   }, {
     name: 'YouPorn',
     color: '#ef7896'

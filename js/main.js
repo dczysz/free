@@ -53,10 +53,10 @@ const CARD_OPACITY = 'aa',
       'name'  : bool - Show 'name' property of site in card header
     }
 ------------------------------------------------------------ */
-function loadCards(array, options = { shuffle: true, title: true, name: false }) {
+function loadCards(array, options = { shuffle: true, title: false, name: false }) {
   // Reset default values if object passed in but doesn't contain all values
   if ( !options.hasOwnProperty('shuffle')) options.shuffle = true;
-  if ( !options.hasOwnProperty('title'))   options.title   = true;
+  if ( !options.hasOwnProperty('title'))   options.title   = false;
   if ( !options.hasOwnProperty('name'))    options.name    = false;
 
   // Shuffle sites in random order
@@ -86,7 +86,6 @@ function loadCards(array, options = { shuffle: true, title: true, name: false })
     header.style.background = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
     header.style.borderRadius = 0;
     header.classList.add('text-dark');
-    // headerText.style.textShadow = '2px 2px 4px #000';
 
     // Populate header
     header.classList.add('card-header', 'text-center');
@@ -99,7 +98,11 @@ function loadCards(array, options = { shuffle: true, title: true, name: false })
       }
       header.appendChild(logo);
     }
-    if (options.title) header.appendChild(headerText);
+    if ( options.title
+      || site.logo.match(/-icon/)
+      || site.hasOwnProperty('icon')
+      || site.logo === '')
+        header.appendChild(headerText);
     else {
       logo.style.marginBottom = 0;
       logo.style.maxHeight = '50px';
@@ -114,7 +117,8 @@ function loadCards(array, options = { shuffle: true, title: true, name: false })
               || options.name)
             && site[Object.keys(site)[key]] != site.color
             && site[Object.keys(site)[key]] != site.url
-            && site[Object.keys(site)[key]] != site.logo ) {
+            && site[Object.keys(site)[key]] != site.logo
+            && site[Object.keys(site)[key]] != site.icon) {
         dataTitle = document.createElement('h5');
         dataTitle.classList.add('card-title', 'mb-1');
 
