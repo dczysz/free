@@ -40,8 +40,8 @@ window.onscroll = function() {
   </div>
 */
 
-const CARD_OPACITY = 'aa',
-      CARD_W_IMG_OPACITY = '88';
+const CARD_HIGH_OPACITY = 'bb',
+      CARD_LOW_OPACITY = '77';
 
 /*
   Add cards to card-columns div
@@ -82,9 +82,11 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
     }
     // Set styles
     card.style.borderWidth = 'medium';
-    card.style.borderColor  = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
-    header.style.background = site.color + (site.logo? CARD_W_IMG_OPACITY : CARD_OPACITY);
-    header.style.borderRadius = 0;
+    card.style.borderColor  = site.color + CARD_HIGH_OPACITY;
+    header.style.background = site.logo ?
+      `radial-gradient(${site.color + CARD_LOW_OPACITY}, ${site.color + CARD_HIGH_OPACITY})` :
+      site.color + CARD_HIGH_OPACITY;
+    header.style.borderRadius = 0; // Not working if set using CSS
     header.classList.add('text-dark');
 
     // Populate header
@@ -98,6 +100,7 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
       }
       header.appendChild(logo);
     }
+
     if ( options.title
       || site.logo.match(/-icon/)
       || site.hasOwnProperty('icon')

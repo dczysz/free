@@ -362,6 +362,10 @@ var breaches = [
     name: 'ReverbNation',
     color: '#e43526'
   }, {
+    name: 'ShareThis',
+    color: '#94d227',
+    icon: true
+  }, {
     name: 'Snapchat',
     color: '#fffc00',
     icon: true
@@ -384,6 +388,9 @@ var breaches = [
     color: '#018643',
     icon: true
   }, {
+    name: 'Verifications.io',
+    color: '#0bbbce'
+  }, {
     name: 'VK',
     color: '#4c75a3'
   }, {
@@ -394,7 +401,7 @@ var breaches = [
     name: 'xHamster',
     color: '#e2454a'
   }, {
-    name: 'Yahoo!',
+    name: 'Yahoo',
     color: '#63246b',
     icon: true
   }, {
