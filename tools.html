@@ -12,7 +12,7 @@
     <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
       <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand mx-2" href="#">Free*</a>
+        <a class="navbar-brand mx-2" href="index.html">Free*</a>
 
         <!-- Collapse toggle button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -26,7 +26,7 @@
               <a class="nav-link" href="alternatives.html">Alternatives</a>
             </li>
             <li class="nav-item mx-1">
-              <a class="nav-link" href="tools.html">Tools</a>
+              <a class="nav-link active" href="#">Tools</a>
             </li>
             <li class="nav-item mx-1">
               <a class="nav-link" href="breaches.html">Breaches</a>
@@ -45,9 +45,8 @@
     <div id="container" class="container">
 
       <header class="text-center py-5">
-        <h1 class="py-4">Free<sup><span>*</span></sup></h1>
-        <h5 class="mb-4">This site was made to show some of the invasive tracking and data collection behind many popular services</h5>
-          <h5>Click on a card for more info</h5>
+        <h1 class="py-4">Tools</h1>
+        <h5 class="mb-4">Below are some tools and services to help increase your privacy</h5>
       </header>
 
       <div class="card-columns">
@@ -64,7 +63,7 @@
     <script>
       $(document).ready(function() {
         $('#year').text((new Date).getFullYear());
-        loadCards(sites);
+        loadCards(tools);
       });
     </script>
   </body>

@@ -83,40 +83,12 @@ var sites = [
 ------------------------------------------------------------ */
 var alternatives = [
   {
-    name: 'Blur',
-    color: '#32668e',
-    logo: 'img/blur.png',
-    url: 'https://www.abine.com/index.html',
-    what_it_is: 'Masked emails, phone number, and credit card, browser extension blocks trackers and ads',
-    what_it_costs: 'Free masked emails and extension, premium adds masked phone and credit card for down to $2.20/month with 3-year subscription'
-  }, {
-    name: 'Bouncer',
-    color: '#fdde58',
-    logo: 'img/bouncer-icon.png',
-    url: 'https://play.google.com/store/apps/details?id=com.samruston.permission',
-    what_it_is: 'Grant permissions to apps temporarily and automatically remove them when you close the app or after a chosen period of time',
-    what_it_costs: '$0.99'
-  }, {
-    name: 'Cookie AutoDelete',
-    color: '#00a8ff',
-    logo: 'img/cookieautodelete-icon.png',
-    url: 'https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/blob/3.X.X-Branch/README.md',
-    what_it_is: 'Open-source broswer extension that automatically deletes any cookies not in use whenever a tab is closed',
-    what_it_costs: 'Free'
-  }, {
     name: 'DuckDuckGo',
     color: '#de5833',
     logo: 'img/duckduckgo-icon.png',
     url: 'https://duckduckgo.com/',
     what_it_is: 'Search engine that makes money from ads but doesn\'t track you',
     what_it_costs: 'Free, ads are based on search terms only'
-  }, {
-    name: 'Exodus Privacy',
-    color: '#684971',
-    logo: 'img/exodusprivacy-icon.png',
-    url: 'https://exodus-privacy.eu.org/en/',
-    what_it_is: 'Analyzes privacy concerns in Android applications',
-    what_it_costs: 'Free'
   }, {
     name: 'F-Droid',
     color: '#b1eb0b',
@@ -139,13 +111,6 @@ var alternatives = [
     what_it_is: 'Open-source browser that\'s not made by an ad company so it doesn\'t track everything you do, instructions for extra privacy settings tweaks <a href="https://www.privacytools.io/#about_config">can be found here</a>',
     what_it_costs: 'Free'
   }, {
-    name: 'HTTPS Everywhere',
-    color: '#0098ff',
-    logo: 'img/httpseverywhere-icon.png',
-    url: 'https://www.eff.org/https-everywhere',
-    what_it_is: 'Open-source browser extension that encrypts website communications by changing any HTTP connections to HTTPS',
-    what_it_costs: 'Free, developed by The Tor Project and the Electronic Frontier Foundation'
-  }, {
     name: 'KeePassXC',
     color: '#6cac4d',
     logo: 'img/keepassxc-icon.png',
@@ -166,13 +131,6 @@ var alternatives = [
     url: 'https://www.libreoffice.org',
     what_it_is: 'Open-source office suite that can work with Microsoft Office files',
     what_it_costs: 'Free'
-  }, {
-    name: 'Malwarebytes',
-    color: '#3371e3',
-    logo: 'img/malwarebytes.png',
-    url: 'https://www.malwarebytes.com',
-    what_it_is: 'PC utility that reactively scans for and removes malware, ransomeware, adware, and more',
-    what_it_costs: 'Free, premium adds more features like automated scans and real-time protection'
   }, {
     name: 'mastodon',
     color: '#2b90d9',
@@ -195,40 +153,12 @@ var alternatives = [
     what_it_is: 'Self-hosted cloud storage',
     what_it_costs: 'Free for personal use'
   }, {
-    name: 'NoScript',
-    color: '#cf0000',
-    logo: 'img/noscript-icon.png',
-    url: 'https://noscript.net',
-    what_it_is: 'Open-source Firefox browser extension that blocks all scripts on websites allowing you to build your own whitelist',
-    what_it_costs: 'Free'
-  }, {
-    name: 'Pay With Privacy',
-    color: '#ff2d36',
-    logo: 'img/paywithprivacy-icon.png',
-    url: 'https://privacy.com',
-    what_it_is: 'Create free, unique, virtual debit cards for either single-use or have them link to the first vendor they\'re used with, can also set a monthly limit for subscriptions and bills',
-    what_it_costs: 'Free, they get a cut of the debit card transaction fees like any other bank'
-  }, {
     name: '&#9651; Prismo',
     color: '#16a1b5',
     icon: true,
     url: 'https://prismo.news',
     what_it_is: 'Decentralized open-source Reddit alternative',
     what_it_costs: 'Free'
-  }, {
-    name: 'Privacy Badger',
-    color: '#ec9329',
-    logo: 'img/privacybadger-icon.png',
-    url: 'https://www.eff.org/privacybadger',
-    what_it_is: 'Open-source browser extension that automatically learns to block invisible trackers that don\'t respect Do Not Track, instead of relying on a central blacklist',
-    what_it_costs: 'Free, developed by the Electronic Frontier Foundation'
-  }, {
-    name: 'Private Internet Access',
-    color: '#39b54a',
-    logo: 'img/privateinternetaccess.png',
-    url: 'https://www.privateinternetaccess.com',
-    what_it_is: 'Swiss-based VPN that hides your IP address and encrypts all internet traffic, so even your ISP can\'t see what you do online',
-    what_it_costs: '$6.95/month, $3.33/month with 1-year subscription, $2.91/month with 2-year subscription'
   }, {
     name: 'ProtonMail',
     color: '#505061',
@@ -251,6 +181,87 @@ var alternatives = [
     what_it_is: '"The Onion Router"<br>Worldwide network of volunteer-operated servers that routes your connection through 3 separate nodes so no single node knows both the origin and the destination of the requests<br>Download the Tor Browser for anonymous browsing',
     what_it_costs: 'Free, developed by the US NAVY, currently run by The Tor Project'
   }, {
+    name: 'Wire',
+    color: '#1f2024',
+    logo: 'img/wire-icon.png',
+    url: 'https://wire.com/en/',
+    what_it_is: 'End-to-end encrypted messaging, file sharing, and voice calls',
+    what_it_costs: 'Free for personal use with max file sharing size of 25MB/file'
+  }
+];
+
+var tools = [
+  {
+    name: 'Blur',
+    color: '#32668e',
+    logo: 'img/blur.png',
+    url: 'https://www.abine.com/index.html',
+    what_it_is: 'Masked emails, phone number, and credit card, browser extension blocks trackers and ads',
+    what_it_costs: 'Free masked emails and extension, premium adds masked phone and credit card for down to $2.20/month with 3-year subscription'
+  }, {
+    name: 'Bouncer',
+    color: '#fdde58',
+    logo: 'img/bouncer-icon.png',
+    url: 'https://play.google.com/store/apps/details?id=com.samruston.permission',
+    what_it_is: 'Grant permissions to apps temporarily and automatically remove them when you close the app or after a chosen period of time',
+    what_it_costs: '$0.99'
+  }, {
+    name: 'Cookie AutoDelete',
+    color: '#00a8ff',
+    logo: 'img/cookieautodelete-icon.png',
+    url: 'https://github.com/Cookie-AutoDelete/Cookie-AutoDelete/blob/3.X.X-Branch/README.md',
+    what_it_is: 'Open-source broswer extension that automatically deletes any cookies not in use whenever a tab is closed',
+    what_it_costs: 'Free'
+  }, {
+    name: 'Exodus Privacy',
+    color: '#684971',
+    logo: 'img/exodusprivacy-icon.png',
+    url: 'https://exodus-privacy.eu.org/en/',
+    what_it_is: 'Analyzes privacy concerns in Android applications',
+    what_it_costs: 'Free'
+  }, {
+    name: 'HTTPS Everywhere',
+    color: '#0098ff',
+    logo: 'img/httpseverywhere-icon.png',
+    url: 'https://www.eff.org/https-everywhere',
+    what_it_is: 'Open-source browser extension that encrypts website communications by changing any HTTP connections to HTTPS',
+    what_it_costs: 'Free, developed by The Tor Project and the Electronic Frontier Foundation'
+  }, {
+    name: 'Malwarebytes',
+    color: '#3371e3',
+    logo: 'img/malwarebytes.png',
+    url: 'https://www.malwarebytes.com',
+    what_it_is: 'PC utility that reactively scans for and removes malware, ransomeware, adware, and more',
+    what_it_costs: 'Free, premium adds more features like automated scans and real-time protection'
+  }, {
+    name: 'NoScript',
+    color: '#cf0000',
+    logo: 'img/noscript-icon.png',
+    url: 'https://noscript.net',
+    what_it_is: 'Open-source Firefox browser extension that blocks all scripts on websites by default, allowing you to build your own whitelist',
+    what_it_costs: 'Free'
+  }, {
+    name: 'Pay With Privacy',
+    color: '#ff2d36',
+    logo: 'img/paywithprivacy-icon.png',
+    url: 'https://privacy.com',
+    what_it_is: 'Create free, unique, virtual debit cards for either single-use or have them link to the first vendor they\'re used with, can also set a monthly limit for subscriptions and bills',
+    what_it_costs: 'Free, they get a cut of the debit card transaction fees like any other bank'
+  }, {
+    name: 'Privacy Badger',
+    color: '#ec9329',
+    logo: 'img/privacybadger-icon.png',
+    url: 'https://www.eff.org/privacybadger',
+    what_it_is: 'Open-source browser extension that automatically learns to block invisible trackers that don\'t respect Do Not Track, instead of relying on a central blacklist',
+    what_it_costs: 'Free, developed by the Electronic Frontier Foundation'
+  }, {
+    name: 'Private Internet Access',
+    color: '#39b54a',
+    logo: 'img/privateinternetaccess.png',
+    url: 'https://www.privateinternetaccess.com',
+    what_it_is: 'Swiss-based VPN that hides your IP address and encrypts all internet traffic, so even your ISP can\'t see what you do online',
+    what_it_costs: '$6.95/month, $3.33/month with 1-year subscription, $2.91/month with 2-year subscription'
+  }, {
     name: 'uBlock Origin',
     color: '#800000',
     logo: 'img/ublockorigin-icon.png',
@@ -264,14 +275,7 @@ var alternatives = [
     url: 'https://www.veracrypt.fr/en/Home.html',
     what_it_is: 'Open-souce disk encryption software that provides encrypted file volumes as well as full disk encryption',
     what_it_costs: 'Free'
-  }, {
-    name: 'Wire',
-    color: '#1f2024',
-    logo: 'img/wire-icon.png',
-    url: 'https://wire.com/en/',
-    what_it_is: 'End-to-end encrypted messaging, file sharing, and voice calls',
-    what_it_costs: 'Free for personal use with max file sharing size of 25MB/file'
-  }
+  },
 ];
 
 /*

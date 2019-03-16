@@ -51,8 +51,8 @@ window.onload = () => {
   </div>
 */
 
-const CARD_HIGH_OPACITY = 'bb',
-      CARD_LOW_OPACITY = '77';
+const CARD_HIGH_OPACITY = 'aa',
+      CARD_LOW_OPACITY = '66';
 
 /*
   Add cards to card-columns div
@@ -93,9 +93,7 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
     // Set styles
     card.style.borderWidth = 'medium';
     card.style.borderColor  = site.color + CARD_HIGH_OPACITY;
-    header.style.background = site.logo ?
-      `radial-gradient(${site.color + CARD_LOW_OPACITY}, ${site.color + CARD_HIGH_OPACITY})` :
-      site.color + CARD_HIGH_OPACITY;
+    header.style.background = `radial-gradient(${site.color + CARD_LOW_OPACITY}, ${site.color + CARD_HIGH_OPACITY})`;
     header.style.borderRadius = 0; // Not working if set using CSS
     header.classList.add('text-dark');
 
