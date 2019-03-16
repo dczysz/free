@@ -1,19 +1,23 @@
 const DEFAULT_COLOR = '#aaaaaa';
 
+/*
+  Sites with bad privacy policies
+  For index.html
+------------------------------------------------------------ */
 var sites = [
   {
     name: 'Facebook',
     color: '#4767aa',
     logo: 'img/facebook.png',
     url: 'https://www.facebook.com/about/privacy',
-    data_collected: 'Interactions on Facebook like quizzes, <a href=\"https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/\" target=\"_blank\">comments and statuses you type but do not post</a>, browsing info from websites you visit with like buttons, location data, friends, <a href="https://arstechnica.com/gadgets/2012/04/does-facebook-track-your-enemies-as-well-as-your-friends/" target="_blank">enemies(?)</a>, apps you and friends install, Instagram and WhatsApp data',
+    data_collected: 'Interactions on Facebook like quizzes, <a href="https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/">comments and statuses you type but do not post</a>, browsing info from websites you visit with like buttons, location data, friends, <a href="https://arstechnica.com/gadgets/2012/04/does-facebook-track-your-enemies-as-well-as-your-friends/">enemies(?)</a>, apps you and friends install, Instagram and WhatsApp data',
     used_for: 'Targeted advertising, facial recognition'
    }, {
     name: 'Google',
     color: '#4086f4',
     logo: 'img/google.png',
     url: 'https://policies.google.com/privacy',
-    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location on Android  <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg" target="_blank">even in airplane mode</a>',
+    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location on Android  <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg">even in airplane mode</a>',
     used_for: 'Targeted advertising'
   }, {
     name: 'Instagram',
@@ -22,6 +26,13 @@ var sites = [
     url: 'https://help.instagram.com/155833707900388',
     data_collected: 'Uploaded content, contacts, location data',
     used_for: 'Targeted advertising, sharing with parent company Facebook, licensing of your photos with no reimbursement'
+  }, {
+    name: 'LinkedIn',
+    color: '#007bb6',
+    logo: 'img/linkedin.png',
+    url: 'https://www.linkedin.com/legal/privacy-policy',
+    data_collected: 'Uploaded content, contacts and calendar if synced, device and location data, messages',
+    used_for: 'Targeted advertising'
   }, {
     name: 'Microsoft',
     color: '#004185',
@@ -35,7 +46,7 @@ var sites = [
     logo: 'img/paypal.png',
     url: 'https://www.paypal.com/gi/webapps/mpp/ua/privacy-full',
     data_collected: 'Name, address, phone, email, contacts, financial account info, transaction info from each transaction including device info, usage and behavior data, and location',
-    used_for: 'Location-based advertising, sharing with other advertising and analytics services and financial institutions - <a href="http://rebecca-ricks.com/paypal-data/" target="_blank">check out this site</a> that shows all the companies PayPal shares your data with'
+    used_for: 'Location-based advertising, sharing with other advertising and analytics services and financial institutions - <a href="http://rebecca-ricks.com/paypal-data/">check out this site</a> that shows all the companies PayPal shares your data with'
   }, {
     name: 'Tinder',
     color: '#fe5665',
@@ -48,8 +59,8 @@ var sites = [
     color: '#1e3944',
     logo: 'img/uber.png',
     url: 'https://privacy.uber.com/policy',
-    data_collected: 'Name, credit card info, current location <a href="" target="_blank">from when you request a ride until 5 minutes after you\'re dropped off</a>',
-    used_for: 'Marketing, data analytics and research, employees have full access to user data <a href="https://www.revealnews.org/blog/why-privacy-advocates-are-worried-about-ubers-security-problems/" target="_blank">which could be used against you</a>'
+    data_collected: 'Name, credit card info, current location from when you request a ride until 5 minutes after you\'re dropped off',
+    used_for: 'Marketing, data analytics and research, employees have full access to user data <a href="https://www.revealnews.org/blog/why-privacy-advocates-are-worried-about-ubers-security-problems/">which could be used against you</a>'
   }, {
     name: 'Venmo',
     color: '#3d95ce',
@@ -62,11 +73,14 @@ var sites = [
     color: '#cd040b',
     logo: 'img/verizon.png',
     url: 'https://www.verizon.com/about/privacy/privacy-policy-summary',
-    data_collected: 'Calls, texts, data, location, browsing history after logging into "My Verizon" on any device',
+    data_collected: 'Calls, texts, data, location, browsing history after logging into My Verizon on any device',
     used_for: 'Targeted advertising, selling location data'
   }
 ];
 
+/*
+  Tools and alternatives to privacy-unfriendly services
+------------------------------------------------------------ */
 var alternatives = [
   {
     name: 'Blur',
@@ -122,7 +136,7 @@ var alternatives = [
     color: '#ff600c',
     logo: 'img/firefox-icon.png',
     url: 'https://www.mozilla.org/en-US',
-    what_it_is: 'Open-source browser that\'s not made by an ad company so it doesn\'t track everything you do, instructions for extra privacy settings tweaks <a href="https://www.privacytools.io/#about_config" target="_blank">can be found here</a>',
+    what_it_is: 'Open-source browser that\'s not made by an ad company so it doesn\'t track everything you do, instructions for extra privacy settings tweaks <a href="https://www.privacytools.io/#about_config">can be found here</a>',
     what_it_costs: 'Free'
   }, {
     name: 'HTTPS Everywhere',
@@ -171,7 +185,7 @@ var alternatives = [
     color: '#5e87a5',
     logo: 'img/mewe.png',
     url: 'https://mewe.com/',
-    what_it_is: 'Social network built with <a href="https://mewe.com/privacy#bill" target="_blank">privacy-by-design</a>, no ads, spyware, or facial-recognition, personal data is never shared and can be deleted at any time',
+    what_it_is: 'Social network built with <a href="https://mewe.com/privacy#bill">privacy-by-design</a>, no ads, spyware, or facial-recognition, personal data is never shared and can be deleted at any time',
     what_it_costs: 'Free access to Facebook-like features as well as 8GB cloud storage, supported by paying for more storage or other features like end-to-end encrypted chat'
   }, {
     name: 'Nextcloud',
@@ -197,7 +211,7 @@ var alternatives = [
   }, {
     name: '&#9651; Prismo',
     color: '#16a1b5',
-    logo: '',
+    icon: true,
     url: 'https://prismo.news',
     what_it_is: 'Decentralized open-source Reddit alternative',
     what_it_costs: 'Free'
@@ -221,7 +235,21 @@ var alternatives = [
     logo: 'img/protonmail.png',
     url: 'https://protonmail.com',
     what_it_is: 'End-to-end encrypted email with mailbox encrypted with your password so even ProtonMail can\'t access your emails',
-    what_it_costs: 'Free with 500MB storage, more features starting at €5 like 5GB, 5 addresses, 200 folders, email filters, and more'
+    what_it_costs: 'Free for 500MB storage, more features starting at €5 like 5GB, 5 addresses, 200 folders, email filters, and more'
+  }, {
+    name: 'Sync.com',
+    color: '#00adef',
+    logo: 'img/sync.com.png',
+    url: 'https://www.sync.com/',
+    what_it_is: 'End-to-end encrypted cloud storage, files are encrypted locally before being uploaded',
+    what_it_costs: 'Free for 5GB storage and basic sharing features, Pro features include 500GB-2TB of storage starting at $49/year'
+  }, {
+    name: 'Tor',
+    color: '#7e4798',
+    logo: 'img/tor.png',
+    url: 'https://www.torproject.org/',
+    what_it_is: '"The Onion Router"<br>Worldwide network of volunteer-operated servers that routes your connection through 3 separate nodes so no single node knows both the origin and the destination of the requests<br>Download the Tor Browser for anonymous browsing',
+    what_it_costs: 'Free, developed by the US NAVY, currently run by The Tor Project'
   }, {
     name: 'uBlock Origin',
     color: '#800000',
@@ -247,7 +275,10 @@ var alternatives = [
 ];
 
 /*
-  https://haveibeenpwned.com/api/v2/breaches
+  Sites that have been breached in the past
+  For breaches.html
+
+  Info from https://haveibeenpwned.com/api/v2/breaches
 
   icon key is an alternative to -icon in logo name,
   actual value isn't checked, just presence of key
@@ -335,7 +366,7 @@ var breaches = [
   }, {
     name: 'LinkedIn',
     color: '#007bb6',
-    icon: true
+    logo: 'img/linkedin.png'
   }, {
     name: 'Malwarebytes',
     color: '#1b79d0',
@@ -368,7 +399,7 @@ var breaches = [
   }, {
     name: 'Snapchat',
     color: '#fffc00',
-    icon: true
+    logo: 'img/snapchat-icon.png'
   }, {
     name: 'Sony',
     color: '#000000'
@@ -415,5 +446,75 @@ var breaches = [
     date: 'Jan 15, 2012',
     accounts: '24,000,000',
     data: 'Email addresses, Passwords, Names, Billing and shipping addresses, Phone numbers, Last four digits of credit card numbers'
+  }
+];
+
+
+/*
+  Sites that allow downloading of all the data they have on you
+  For data.html
+------------------------------------------------------------ */
+
+var data = [
+  {
+    name: 'Amazon',
+    color: '#ff9900',
+    logo: 'img/amazon.png',
+    url: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=201983330'
+  }, {
+    name: 'Alexa Recordings',
+    color: '#5fcaf4',
+    logo: 'img/amazonalexa.png',
+    url: 'https://www.amazon.com/gp/help/customer/display.html?nodeId=201602040'
+  }, {
+    name: 'Apple',
+    color: 'DEFAULT_COLOR',
+    logo: 'img/apple-icon.png',
+    url: 'https://privacy.apple.com/account'
+  }, {
+    name: 'Facebook',
+    color: '#4767aa',
+    logo: 'img/facebook.png',
+    url: 'https://www.facebook.com/help/1701730696756992'
+  }, {
+    name: 'Google',
+    color: '#4086f4',
+    logo: 'img/google.png',
+    url: 'https://myaccount.google.com/privacy#takeout'
+  }, {
+    name: 'Instagram',
+    color: '#d0389f',
+    logo: 'img/instagram.png',
+    url: 'https://www.instagram.com/download/request/'
+  }, {
+    name: 'LinkedIn',
+    color: '#007bb6',
+    logo: 'img/linkedin.png',
+    url: 'https://www.linkedin.com/psettings/member-data'
+  }, {
+    name: 'Reddit',
+    color: '#ff4500',
+    logo: 'img/reddit.png',
+    url: 'https://www.reddithelp.com/en/categories/using-reddit/your-reddit-account/accessing-your-reddit-data'
+  }, {
+    name: 'Snapchat',
+    color: '#fffc00',
+    logo: 'img/snapchat-icon.png',
+    url: 'https://accounts.snapchat.com/accounts/downloadmydata'
+  }, {
+    name: 'Spotify',
+    color: '#1ed760',
+    logo: 'img/spotify.png',
+    url: 'https://www.spotify.com/us/account/privacy/'
+  }, {
+    name: 'Tinder',
+    color: '#fe5665',
+    logo: 'img/tinder.png',
+    url: 'https://account.gotinder.com/data'
+  }, {
+    name: 'Twitter',
+    color: '#1da1f2',
+    logo: 'img/twitter-icon.png',
+    url: 'https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive'
   }
 ];

@@ -24,6 +24,17 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
+// Set all links to open new window and send no referer
+window.onload = () => {
+  setTimeout(() => {
+    let links = $('.card-columns a');
+    for (let link of links) {
+      link.target = '_blank';
+      link.rel = 'noreferrer';
+    }
+  }, 1500);
+};
+
 
 /* Current format
 
@@ -78,7 +89,6 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
     if (site.url != '') {
       card.style.cursor = 'pointer';
       card.href = site.url;
-      card.target = '_blank'
     }
     // Set styles
     card.style.borderWidth = 'medium';
@@ -102,9 +112,9 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
     }
 
     if ( options.title
-      || site.logo.match(/-icon/)
+      || (site.hasOwnProperty('logo') && (site.logo.match(/-icon/) || site.logo === ''))
       || site.hasOwnProperty('icon')
-      || site.logo === '')
+      || !site.hasOwnProperty('logo'))
         header.appendChild(headerText);
     else {
       logo.style.marginBottom = 0;
@@ -146,7 +156,7 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
     }
 
     card.appendChild(header);
-    card.appendChild(body);
+    if (body.children.length) card.appendChild(body);
 
     $('.card-columns')[0].appendChild(card);
   }
