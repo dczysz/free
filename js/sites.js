@@ -483,7 +483,7 @@ var data = [
   }, {
     name: 'Apple',
     color: 'DEFAULT_COLOR',
-    logo: 'img/apple-icon.png',
+    logo: 'img/apple.png',
     url: 'https://privacy.apple.com/account'
   }, {
     name: 'Facebook',
@@ -528,7 +528,7 @@ var data = [
   }, {
     name: 'Twitter',
     color: '#1da1f2',
-    logo: 'img/twitter-icon.png',
+    logo: 'img/twitter.png',
     url: 'https://help.twitter.com/en/managing-your-account/how-to-download-your-twitter-archive'
   }
 ];
