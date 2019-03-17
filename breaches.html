@@ -6,6 +6,12 @@
     <title>Free* | Breaches</title>
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      #numBreaches {
+        font-size: 1.1em;
+        font-weight: 600;
+      }
+    </style>
   </head>
   <body class="bg-light">
 
@@ -47,7 +53,8 @@
       <header class="text-center py-5">
         <h1 class="py-4">Breaches</h1>
         <h5 class="mb-4">Below are some popular services that <i>we know</i> have suffered data breaches</h5>
-        <p>Info from haveibeenpwned.com, <a href="https://haveibeenpwned.com" target="_blank">see if you're affected</a></p>
+        <p>Info from haveibeenpwned.com which currently lists <span id="numBreaches">over 300</span> reported breaches,
+          <a href="https://haveibeenpwned.com" target="_blank">see if you're affected</a></p>
       </header>
 
       <div class="card-columns text-dark">
@@ -69,15 +76,18 @@
       $(document).ready(function() {
         $('#year').text((new Date).getFullYear());
 
-        //
+        // Fetch info from haveibeenpwned
         $.getJSON('https://haveibeenpwned.com/api/v2/breaches', function(data) {
-          // console.log(data[0]); // Example data
+
+          // Update number of breaches in header
+          $('#numBreaches')[0].innerHTML = data.length;
+
           for (let pwnSite of data) {
             for (let breachSite of breaches) {
               // Add more data to sites present in breaches array
               if (pwnSite.Title == breachSite.name) {
 
-                // Get date
+                // Get date the hard way since can't get Date() to work?
                 let dateArr = pwnSite.BreachDate.split('-'),
                     date = '',
                     descriptionEl = document.createElement('div'),

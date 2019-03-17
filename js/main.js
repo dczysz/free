@@ -51,8 +51,8 @@ window.onload = () => {
   </div>
 */
 
-const CARD_HIGH_OPACITY = 'aa',
-      CARD_LOW_OPACITY = '66';
+const CARD_HIGH_OPACITY = '88',
+      CARD_LOW_OPACITY = '44';
 
 /*
   Add cards to card-columns div

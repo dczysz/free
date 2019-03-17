@@ -1,4 +1,4 @@
-const DEFAULT_COLOR = '#aaaaaa';
+const DEFAULT_COLOR = '#999999';
 
 /*
   Sites with bad privacy policies
@@ -153,6 +153,13 @@ var alternatives = [
     what_it_is: 'Social network built with <a href="https://mewe.com/privacy#bill">privacy-by-design</a>, no ads, spyware, or facial-recognition, personal data is never shared and can be deleted at any time',
     what_it_costs: 'Free access to Facebook-like features as well as 8GB cloud storage, supported by paying for more storage or other features like end-to-end encrypted chat'
   }, {
+    name: 'Mint Mobile',
+    color: '#549c74',
+    logo: 'img/mintmobile.png',
+    url: 'https://www.mintmobile.com/',
+    what_it_is: 'Flexible phone plan with a better privacy policy, nationwide coverage, and lower monthly cost',
+    what_it_costs: 'Starts at $25/month for unlimited nationwide talk and text, 3GB of 4G LTE and unlimited slower data the rest of the month<br>$30/month for 8GB<br>$38/month for 12GB'
+  }, {
     name: 'Nextcloud',
     color: '#0082c9',
     logo: 'img/nextcloud.png',
@@ -298,6 +305,7 @@ var tools = [
   actual value isn't checked, just presence of key
 
   Sites with additional info not from haveibeenpwned
+  Some sites I found a better logo for, which overrides hibp logo
 ------------------------------------------------------------ */
 var breaches = [
   {
@@ -405,7 +413,8 @@ var breaches = [
     color: '#282a2d'
   }, {
     name: 'ReverbNation',
-    color: '#e43526'
+    color: '#e43526',
+    logo: 'img/reverbnation.png'
   }, {
     name: 'ShareThis',
     color: '#94d227',
@@ -417,6 +426,14 @@ var breaches = [
   }, {
     name: 'Sony',
     color: '#000000'
+  }, {
+    name: 'T-Mobile',
+    color: '#ed008c',
+    logo: 'img/tmobile.png',
+    url: 'https://techcrunch.com/2018/08/24/t-mobile-says-hackers-stole-customer-data-in-data-breach/',
+    date: 'Aug 20, 2018',
+    accounts: '1,243,910',
+    data: 'Mobile Number, Full Billing Information, Sim Information, Subscription Information, Account Information, Phone Information, Device Information'
   }, {
     name: 'Ticketfly',
     color: '#5746de',
@@ -455,7 +472,7 @@ var breaches = [
   }, {
     name: 'Zappos',
     color: '#0076bd',
-    logo: 'https://www.zappos.com/zappos-rewards/images/logo@2x.png',
+    logo: 'img/zappos.png',
     url: 'https://www.cnet.com/news/zappos-customer-data-accessed-in-security-breach/',
     date: 'Jan 15, 2012',
     accounts: '24,000,000',
