@@ -433,7 +433,7 @@ var breaches = [
     url: 'https://techcrunch.com/2018/08/24/t-mobile-says-hackers-stole-customer-data-in-data-breach/',
     date: 'Aug 20, 2018',
     accounts: '1,243,910',
-    data: 'Mobile Number, Full Billing Information, Sim Information, Subscription Information, Account Information, Phone Information, Device Information'
+    data: 'Mobile number, Full billing information, Sim information, Subscription information, Account information, Phone information, Device information'
   }, {
     name: 'Ticketfly',
     color: '#5746de',

@@ -10,6 +10,7 @@
       #numBreaches {
         font-size: 1.1em;
         font-weight: 600;
+        transition: opacity 1s;
       }
     </style>
   </head>
@@ -80,7 +81,12 @@
         $.getJSON('https://haveibeenpwned.com/api/v2/breaches', function(data) {
 
           // Update number of breaches in header
-          $('#numBreaches')[0].innerHTML = data.length;
+          $('#numBreaches')[0].style.opacity = 0;
+          setTimeout(() => {
+            $('#numBreaches')[0].innerHTML = data.length;
+            $('#numBreaches')[0].style.opacity = 1;
+          }, 1000);
+
 
           for (let pwnSite of data) {
             for (let breachSite of breaches) {
