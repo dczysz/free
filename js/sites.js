@@ -79,7 +79,7 @@ var sites = [
 ];
 
 /*
-  Tools and alternatives to privacy-unfriendly services
+  Alternatives to privacy-unfriendly services
 ------------------------------------------------------------ */
 var alternatives = [
   {
@@ -110,6 +110,13 @@ var alternatives = [
     url: 'https://www.mozilla.org/en-US',
     what_it_is: 'Open-source browser that\'s not made by an ad company so it doesn\'t track everything you do, instructions for extra privacy settings tweaks <a href="https://www.privacytools.io/#about_config">can be found here</a>',
     what_it_costs: 'Free'
+  }, {
+    name: 'Firefox Send',
+    color: '#ff600c',
+    logo: 'img/firefoxsend.png',
+    url: 'https://send.firefox.com/',
+    what_it_is: 'Open-source file sharing that\'s end-to-end encrypted, with automatically expiring links and optional password',
+    what_it_costs: 'Free up to 1GB file size, 2.5GB with a linked Firefox account'
   }, {
     name: 'KeePassXC',
     color: '#6cac4d',
@@ -190,6 +197,9 @@ var alternatives = [
   }
 ];
 
+/*
+  Privacy-friendly tools and services
+------------------------------------------------------------ */
 var tools = [
   {
     name: 'Blur',
