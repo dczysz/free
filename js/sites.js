@@ -17,7 +17,7 @@ var sites = [
     color: '#4086f4',
     logo: 'img/google.png',
     url: 'https://policies.google.com/privacy',
-    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location on Android  <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg">even in airplane mode</a>',
+    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location on Android  <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg">even in airplane mode</a>, YouTube usage',
     used_for: 'Targeted advertising'
   }, {
     name: 'Instagram',
@@ -117,6 +117,13 @@ var alternatives = [
     url: 'https://send.firefox.com/',
     what_it_is: 'Open-source file sharing that\'s end-to-end encrypted, with automatically expiring links and optional password',
     what_it_costs: 'Free up to 1GB file size, 2.5GB with a linked Firefox account'
+  }, {
+    name: 'Invidious',
+    color: DEFAULT_COLOR,
+    logo: 'img/invidious-icon.png',
+    url: 'https://invidio.us/',
+    what_it_is: 'Open-source alternative front-end for YouTube, with no ads, no tracking, and no Google account needed',
+    what_it_costs: 'Free'
   }, {
     name: 'KeePassXC',
     color: '#6cac4d',
@@ -328,10 +335,6 @@ var breaches = [
     color: '#db0d15',
     icon: true
   }, {
-    name: 'Collection #1',
-    color: DEFAULT_COLOR,
-    icon: true
-  },  {
     name: 'Comcast',
     color: DEFAULT_COLOR,
     icon: true
