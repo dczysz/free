@@ -6,6 +6,7 @@
     <title>Free*</title>
     <link rel="stylesheet" href="lib/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="lib/js/prefixfree.js" charset="utf-8"></script>
   </head>
   <body class="bg-light">
 
@@ -36,7 +37,9 @@
             </li>
           </ul>
           <ul class="tracking navbar-nav">
-            <li class="nav-item"><a class="fingerprint nav-link" href="https://dczysz.github.io/tracking">How easy is it to track you?</a></li>
+            <li class="nav-item mx-1">
+              <a class="fingerprint nav-link" href="https://dczysz.github.io/tracking">How easy is it to track you?</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -45,9 +48,9 @@
     <div id="container" class="container">
 
       <header class="text-center py-5">
-        <h1 class="py-4">Free<sup><span>*</span></sup></h1>
+        <h1 class="py-4" data-toggle="modal" data-target="#modal">Free<sup><span>*</span></sup></h1>
         <h5 class="mb-4">This site was made to show some of the invasive tracking and data collection behind many popular services</h5>
-          <h5>Click on a card for more info</h5>
+          <h5>Click the cards for more info</h5>
       </header>
 
       <div class="card-columns">
@@ -55,6 +58,31 @@
 
       <footer class="text-center my-2 small">Copyright &copy; <span id="year">2019</span> D. Czysz</footer>
     </div> <!-- end container -->
+
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="modal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h4 class="modal-title">
+              <span id="modalTitle"></span>
+              <span id="modal"></span>
+            </h4>
+
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+
+          <div class="modal-body">
+            Modal body..
+          </div> -->
+
+          <!-- <div class="modal-footer"></div> -->
+          <!-- TODO: Add links to policies -->
+        <!-- </div>
+      </div> -->
+
+    </div>
 
     <script src="lib/js/jquery.min.js" charset="utf-8"></script>
     <script src="lib/js/popper.min.js" charset="utf-8"></script>

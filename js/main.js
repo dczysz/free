@@ -11,9 +11,11 @@ $('.fingerprint').click(function(event) {
   });
 });
 
+/*
+  Set up disappearing nav
+------------------------------------------------------------ */
 const MIN_SCROLL_POS = $('nav').height() + $('header').height() + 30;
 var prevScrollpos = window.pageYOffset;
-
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
@@ -24,7 +26,9 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-// Set all links to open new window and send no referer
+/*
+  Set all links to open new window and send no referer
+------------------------------------------------------------ */
 window.onload = () => {
   setTimeout(() => {
     let links = $('.card-columns a');
@@ -83,13 +87,27 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
         dataTitle,
         dataText;
 
+    // Modal content
+    // if (site.url.includes('tosdr.org')) {
+    //   card.onclick = () => {
+    //     $('#modalTitle')[0].innerHTML = site.name;
+    //
+    //     // TODO: Get content form tosdr API and put in modal body
+    //     addModalContent(site.name.toLowerCase());
+    //   }
+    //   card.setAttribute('data-toggle', 'modal');
+    //   card.setAttribute('data-target', '#modal');
+    // }
+
     // Build card
     card.classList.add('card');
+
     // Add more info url if exists
     if (site.url != '') {
       card.style.cursor = 'pointer';
       card.href = site.url;
     }
+
     // Set styles
     card.style.borderWidth = 'medium';
     card.style.borderColor  = site.color + CARD_HIGH_OPACITY;
@@ -158,6 +176,61 @@ function loadCards(array, options = { shuffle: true, title: false, name: false }
 
     $('.card-columns')[0].appendChild(card);
   }
+}
+
+function addModalContent(name) {
+  let modalBody = $('.modal-body')[0];
+  // Clear modalBody before appending
+  while (modalBody.firstChild) {
+    modalBody.removeChild(modalBody.firstChild);
+  }
+
+    $.getJSON(`https://tosdr.org/api/1/service/${name}.json`)
+      .done( (data) => {
+      console.log(data);
+
+      for (let i = 0; i < data.points.length; i++) {
+        let point = data.pointsData[data.points[i]];
+
+        // Create elements
+        let row = document.createElement('div');
+        let icon = document.createElement('span');
+        let summary = document.createElement('span');
+
+        // Add classes
+        row.classList.add('point');
+        icon.classList.add('point-icon');
+        summary.classList.add('point-summary');
+
+        // Icon
+        switch (point.tosdr.point) {
+          case 'blocker':
+            icon.classList.add('blocker-point');
+            icon.innerHTML = '&times;';
+            break;
+          case 'bad':
+            icon.classList.add('bad-point');
+            icon.innerHTML = '&minus;';
+            break;
+          case 'neutral':
+            icon.classList.add('neutral-point');
+            icon.innerHTML = '~';
+            break;
+          case 'good':
+            icon.classList.add('good-point');
+            icon.innerHTML = '&plus;';
+            break;
+        }
+
+        // Summary title
+        summary.innerHTML = point.title;
+
+        // Append!
+        row.appendChild(icon);
+        row.appendChild(summary);
+        modalBody.appendChild(row);
+      }
+  });
 }
 
 function fisherYatesShuffle(array) {

@@ -45,6 +45,7 @@ a.card {
   margin-top: 1rem;
 }
 
+
 @media (max-width: 575px) {
     .card-columns {
         column-count: 1;

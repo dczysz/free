@@ -9,21 +9,21 @@ var sites = [
     name: 'Facebook',
     color: '#4767aa',
     logo: 'img/facebook.png',
-    url: 'https://www.facebook.com/about/privacy',
+    url: 'https://tosdr.org/#facebook',
     data_collected: 'Interactions on Facebook like quizzes, <a href="https://arstechnica.com/information-technology/2013/12/facebook-collects-conducts-research-on-status-updates-you-never-post/">comments and statuses you type but do not post</a>, browsing info from websites you visit with like buttons, location data, friends, <a href="https://arstechnica.com/gadgets/2012/04/does-facebook-track-your-enemies-as-well-as-your-friends/">enemies(?)</a>, apps you and friends install, Instagram and WhatsApp data',
     used_for: 'Targeted advertising, facial recognition'
    }, {
     name: 'Google',
     color: '#4086f4',
     logo: 'img/google.png',
-    url: 'https://policies.google.com/privacy',
-    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location on Android  <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg">even in airplane mode</a>, YouTube usage',
+    url: 'https://tosdr.org/#google',
+    data_collected: 'Gmail content, drive files, calendar appointments, photos, searches, browsing history through page analytics, DoubleClick ads, and captchas, calls, texts, location <a href="https://apnews.com/828aefab64d4411bac257a07c1af0ecb">even with location off</a> or <a href="https://www.youtube.com/watch?v=S0G6mUyIgyg">airplane mode on</a>, YouTube usage',
     used_for: 'Targeted advertising'
   }, {
     name: 'Instagram',
     color: '#d0389f',
     logo: 'img/instagram.png',
-    url: 'https://help.instagram.com/155833707900388',
+    url: 'https://tosdr.org/#instagram',
     data_collected: 'Uploaded content, contacts, location data',
     used_for: 'Targeted advertising, sharing with parent company Facebook, licensing of your photos with no reimbursement'
   }, {
@@ -51,7 +51,7 @@ var sites = [
     name: 'Tinder',
     color: '#fe5665',
     logo: 'img/tinder.png',
-    url: 'https://www.gotinder.com/privacy',
+    url: 'https://tosdr.org/#tinder',
     data_collected: 'Facebook info like photos, locations, and statuses, device ID and type, Google and Apple advertising IDs, mobile and wireless network info like service provider, input from accelerometer, gyroscope, and compass, precise geolocation even while not using the app',
     used_for: 'Targeted advertising, full usage rights to your data including photos from linked accounts'
   }, {
@@ -87,8 +87,8 @@ var alternatives = [
     color: '#de5833',
     logo: 'img/duckduckgo-icon.png',
     url: 'https://duckduckgo.com/',
-    what_it_is: 'Search engine that makes money from ads but doesn\'t track you',
-    what_it_costs: 'Free, ads are based on search terms only'
+    what_it_is: 'Search engine that doesn\'t track you',
+    what_it_costs: 'Free, supported by search-based promoted links'
   }, {
     name: 'F-Droid',
     color: '#b1eb0b',
@@ -122,7 +122,7 @@ var alternatives = [
     color: DEFAULT_COLOR,
     logo: 'img/invidious-icon.png',
     url: 'https://invidio.us/',
-    what_it_is: 'Open-source alternative front-end for YouTube, with no ads, no tracking, and no Google account needed',
+    what_it_is: 'Open-source alternative front-end for YouTube with no ads, no tracking, and no Google account needed',
     what_it_costs: 'Free'
   }, {
     name: 'KeePassXC',
@@ -187,6 +187,13 @@ var alternatives = [
     url: 'https://protonmail.com',
     what_it_is: 'End-to-end encrypted email with mailbox encrypted with your password so even ProtonMail can\'t access your emails',
     what_it_costs: 'Free for 500MB storage, more features starting at €5 like 5GB, 5 addresses, 200 folders, email filters, and more'
+  }, {
+    name: 'searX',
+    color: DEFAULT_COLOR,
+    logo: 'img/searx.png',
+    url: 'https://searx.me/',
+    what_it_is: 'Open-source metasearch engine that aggregates the results of other search engines while protecting you from their tracking',
+    what_it_costs: 'Free, supported by search-based promoted links'
   }, {
     name: 'Sync.com',
     color: '#00adef',
