@@ -1,0 +1,89 @@
+---
+  permalink: /404.html
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Free*</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      .card-columns {
+        max-width: 300px;
+        column-count: 1;
+        margin: 0 auto 30px auto;
+      }
+    </style>
+    <script src="lib/js/prefixfree.js" charset="utf-8"></script>
+  </head>
+  <body class="bg-light">
+
+    <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand mx-2" href="index.html">Free*</a>
+
+        <!-- Collapse toggle button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="alternatives.html">Alternatives</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="tools.html">Tools</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="breaches.html">Breaches</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="data.html">Your Data</a>
+            </li>
+          </ul>
+          <ul class="tracking navbar-nav">
+            <li class="nav-item mx-1">
+              <a class="fingerprint nav-link" href="https://dczysz.github.io/tracking">How easy is it to track you?</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="container" class="container">
+
+      <header class="text-center py-5">
+        <h1 class="py-4" data-toggle="modal" data-target="#modal">Oops!</h1>
+        <h5 class="mb-4">Couldn't find what you were looking for</h5>
+      </header>
+
+      <div class="card-columns"></div>
+
+      <footer class="text-center my-2 small">
+        Copyright &copy; <span id="year">2019</span> D. Czysz
+      </footer>
+    </div> <!-- end container -->
+
+    <script src="lib/js/jquery.min.js" charset="utf-8"></script>
+    <script src="lib/js/popper.min.js" charset="utf-8"></script>
+    <script src="lib/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/sites.js" charset="utf-8"></script>
+    <script src="js/main.js" charset="utf-8"></script>
+    <script>
+      $(document).ready( () => {
+        $('#year').text((new Date).getFullYear());
+        loadCards([{
+          name: '404',
+          color: DEFAULT_COLOR,
+          url: 'index.html',
+          'Go Back Home' : ''
+        }]);
+      });
+    </script>
+  </body>
+</html>
