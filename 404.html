@@ -81,8 +81,13 @@
           name: '404',
           color: DEFAULT_COLOR,
           url: 'index.html',
-          'Go Back Home' : ''
+          'Try Again' : 'The page you were looking for doesn\'t exist, check the URL and try again or click here to go back home'
         }]);
+
+        // Undo target=_blank that's added from main.js on card creation
+        setTimeout(() => {
+          $('.card')[0].target = '_self';
+        }, 1600);
       });
     </script>
   </body>
