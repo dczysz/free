@@ -177,7 +177,7 @@ var alternatives = [
     name: '&#9651; Prismo',
     color: '#16a1b5',
     icon: true,
-    url: 'https://prismo.news',
+    url: 'https://prismo.xyz',
     what_it_is: 'Decentralized open-source Reddit alternative',
     what_it_costs: 'Free'
   }, {
